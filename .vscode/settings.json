@@ -1,0 +1,7 @@
+{
+  "python.pythonPath": "/home/omar/ask/env/bin/python3.8",
+  "prettier.disableLanguages": [
+    "HTML",
+    "Django HTML"
+  ]
+}

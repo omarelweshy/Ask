@@ -1,0 +1,31 @@
+{% extends './_base_profile.html' %}
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+      <h6>ACCOUNT SETTINGS</h6>
+      <hr>
+      <form method="post">
+      {% csrf_token %}
+      {{form|crispy}}
+        <input type="submit" class="btn btn-success" value="Update Information">
+      </form>
+      <hr>
+      <hr>
+        <div class="form-group">
+          <label class="d-block text-primary">Deactive Account</label>
+          <p class="text-muted font-size-sm">Designates whether this user should be treated as active. Unselect this instead of deleting accounts.</p>
+        </div>
+        {% comment %} <a href="{% url '' %}"> {% endcomment %}
+        <button class="btn btn-warning" type="button">Deactive Account</button> 
+        </a>
+
+      <hr>
+        <div class="form-group">
+          <label class="d-block text-danger">Delete Account</label>
+          <p class="text-muted font-size-sm">Once you delete your account, there is no going back. Please be certain.</p>
+        </div>
+        {% comment %} <a href="{% url '' %}"> {% endcomment %}
+        <button class="btn btn-danger" type="button">Delete Account</button> 
+        </a>
+{% endblock content %}

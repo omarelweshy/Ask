@@ -1,0 +1,17 @@
+{% extends './_base_profile.html' %}
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+ <div class="tab-pane active" id="profile">
+                <h6>YOUR PROFILE INFORMATION</h6>
+                <hr>
+                <form enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                {{form|crispy}}
+                  <input type="submit" class="btn btn-primary" value="Update Profile">
+                </form>
+              </div>           
+              
+              {% endblock content %}
