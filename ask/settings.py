@@ -36,8 +36,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'widget_tweaks',
     'author',
-    'crispy_forms'
-
+    'crispy_forms',
     # For facebook security connection
     # "sslserver",
 
@@ -64,6 +63,7 @@ AUTH_USER_MODEL = 'users.User'
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_FORMS = {'signup': 'users.forms.UserCreationForm'}

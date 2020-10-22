@@ -11,7 +11,7 @@ class ProfileSettingsUpdateView(UpdateView):
     form = UserChangeForm
     fields = ['first_name', 'last_name', 'location',
               'bio', 'url', 'photo', 'gender']
-    template_name = "profile_settings/profile.html"
+    template_name = "profile_settings/profile_settings.html"
     success_url = reverse_lazy('home')
 
     def get_object(self):
@@ -22,7 +22,7 @@ class AccountSettingsUpdateView(UpdateView):
     model = User
     form = UserChangeForm
     fields = ['username', 'email', ]
-    template_name = "profile_settings/account.html"
+    template_name = "profile_settings/account_settings.html"
     success_url = reverse_lazy('home')
 
     def get_object(self):
