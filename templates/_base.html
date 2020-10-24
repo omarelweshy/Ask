@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href='https://fonts.googleapis.com/css?family=Beth Ellen' rel='stylesheet'>
     <link href="{% static 'css/profile.css' %}" rel="stylesheet">
+    <link href="{% static 'css/inbox.css' %}" rel="stylesheet">
 
     <title>
     {% block title %}
+    Home
     {% endblock title %}
     </title>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -27,8 +29,8 @@
       </li>
 
       <li>
-        <a class="nav-link" href="{% url 'home' %}">
-          <button type="button" class="btn btn-light mr-1"><i class="fas fa-inbox"> Inbox</i></button></a>
+        <a class="nav-link" href="{% url 'inbox' %}">
+          <button type="button" class="btn btn-light mr-1"><i class="fas fa-bell"> Notifications</i></button></a>
         </a>
       </li>
 

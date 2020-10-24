@@ -6,6 +6,16 @@ from django.urls import reverse, reverse_lazy
 from .models import User
 
 
+class UserProfile(TemplateView):
+    model = User
+    context_data_name = 'user'
+    template_name = "profile.html"
+    slug_field = "username"
+
+    def get_object(self):
+        return self.request.user
+
+
 class ProfileSettingsUpdateView(UpdateView):
     model = User
     form = UserChangeForm
