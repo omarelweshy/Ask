@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
     'questions.apps.QuestionsConfig',
-    'notifications.apps.NotificationsConfig',
 
     # 3rd Party-Apps
     'allauth',

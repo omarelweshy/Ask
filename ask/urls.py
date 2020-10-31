@@ -10,7 +10,7 @@ urlpatterns = [
     # Apps
     path('', include('pages.urls')),
     path('', include('users.urls')),
-    path('notifications/', include('notifications.urls')),
+    path('notifications/', include('questions.urls')),
 
     # ALLAUTH
     path('account/', include('allauth.urls')),
